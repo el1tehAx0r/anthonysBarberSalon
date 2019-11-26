@@ -1,0 +1,103 @@
+<body>
+  <div style="border:1px solid black;"><p>Add photos to slideshow</p>
+
+  <input type="file" name="pic" accept="image/*">
+{{# each jumbotronGalleries}}
+{{# each this}}
+<form action="/action_page.php">
+  <button type="button">Remove</button>
+  <input type="file" name="pic" accept="image/*">
+</form>
+{{/each}}{{/each}}
+  </div>
+  <div style="border:1px solid black;"><p>Price Editor</p>
+<div style="border:1px solid black;"><p>Haircuts</p></div>
+Add Price above<br>
+  <input type="text" name="firstname" value="Mickey">
+<button type="button">Submit</button>  <br>
+{{# each haircuts}}
+{{# each this}}
+<form action="/action_page.php">
+  <button type="button">Remove</button>
+
+Add Price Below<br>
+  <input type="text" name="firstname" value="Mickey">
+<button type="button">Submit</button>  <br>
+
+</form>
+<div style="border:1px solid black;"><p>Beard Service</p>
+
+  <input type="text" name="firstname" value="Mickey">
+<button type="button">Submit</button>  <br>
+{{# each beardService}}
+{{# each this}}
+<form action="/action_page.php">
+  <button type="button">Remove</button>
+
+Add Price Below<br>
+  <input type="text" name="firstname" value="Mickey">
+<button type="button">Submit</button>  <br>
+</form>
+{{/each}}
+{{/each}}
+</div>
+<div style="border:1px solid black;"><p>Products</p>
+
+  <input type="text" name="firstname" value="Mickey">
+<button type="button">Submit</button>  <br>
+{{# each products}}
+{{# each this}}
+<form action="/action_page.php">
+  <button type="button">Remove</button>
+
+Add Price Below<br>
+  <input type="text" name="firstname" value="Mickey">
+<button type="button">Submit</button>  <br>
+</form>
+{{/each}}
+{{/each}}
+</div>
+
+  <div style="border:1px solid black;"><p>Photo Gallery</p>
+{{# each frontGalleries}}
+{{# each this}}
+<form action="/action_page.php">
+  <input type="file" name="pic" accept="image/*">
+  <button type="button">Remove</button>
+  <input type="file" name="pic" accept="image/*">
+</form>
+{{/each}}
+    {{/each}}
+  </div>
+
+  <div style="border:1px solid black;"><p>Employees</p>
+
+      <input type="text" name="firstname" value="Mickey">
+    <button type="button">Submit</button>  <br>
+    {{# each employee}}
+    {{# each this}}
+    <form action="/action_page.php">
+      <button type="button">Remove</button>
+    Add Price Below<br>
+      <input type="text" name="firstname" value="Mickey">
+    <button type="button">Submit</button>  <br>
+  </form>
+    {{/each}}
+    {{/each}}
+  </div>
+  <div style="border:1px solid black;"><p>Hours, etc.</p>
+    {{# each contact}}
+    {{# each this}}
+Address: <input type="text" name="firstname" value={{this.address}}>
+Phone: <input type="text" name="firstname" value={{this.phone}}>
+Email: <input type="text" name="firstname" value={{this.email}}>
+Mon-Fri: <input type="text" name="firstname" value={{this.monThruFri}}>
+Weekends: <input type="text" name="firstname" value={{this.weekends}}>
+Special Hours: <input type="text" name="firstname" value={{this.specialHours}}>
+Instagram Link: <input type="text" name="firstname" value={{this.instaLink}}>
+FB Link: <input type="text" name="firstname" value={{this.fbLink}}>
+Twitter Link: <input type="text" name="firstname" value={{this.twitterLink}}>
+    {{/each}}
+    {{/each}}
+  </div>
+</body>

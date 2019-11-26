@@ -1,0 +1,33 @@
+
+  <link href="/css/signup.css" rel="stylesheet">
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form action="signin" method="post">
+      <input type="text" id="email" class="fadeIn second" name="email" placeholder=email>
+      <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
+      <input type="hidden" name="_csrf" value="{{csurfToken}}">
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+
+  {{#if haserrors}}
+  <div class="alert alert-danger">
+    {{# each messages}}
+    <p>{{this}}</p>
+    {{/each}}
+  </div>
+  {{/if}}
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Forgot Password?</a>
+    </div>
+
+  </div>
+</div>
